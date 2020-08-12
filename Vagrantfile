@@ -1,4 +1,3 @@
-  
 IMAGE_NAME = "ubuntu/bionic64"
 N = 1
 
