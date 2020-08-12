@@ -1,0 +1,21 @@
+---
+  - host: all
+    become: yes
+    gather_fact: false
+  
+    tasks:
+    - name: install_nginx
+      apt:
+        pkg:
+        - git
+        - zip
+        - unzip
+   
+    - name: php_fpm
+      apt:
+       name: ["php7.2-fpm", "php7.2-cli"]
+       state: latest
+  
+    - name: install_mysql
+      apt: name=mysql-server state=latest
+      

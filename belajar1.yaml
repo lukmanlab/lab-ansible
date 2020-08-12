@@ -1,0 +1,15 @@
+---
+  - name : lukman
+    biodata:
+    - nama: Ahmad Lukman Hakim
+    - alamat: Jepara
+    - Umur: 23
+  
+  - name: gunawan
+    biodata:
+    - nama: Gunawan
+    - alamat: Jepara
+    - Umur: 29
+  
+  
+  
