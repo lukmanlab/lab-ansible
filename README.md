@@ -29,7 +29,7 @@ ssh-copy-id root@xxx.173.66.xxx
 Testing Login
 ```
 ssh vagrant@192.168.99.11
-ssh root@202.173.66.126
+ssh root@xxx.173.66.xxx
 ```
 
 Test Ad-Hoc Command, module `ping`:
