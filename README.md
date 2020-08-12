@@ -23,7 +23,7 @@ server2 ansible_host=202.173.66.126 ansible_user=root ansible_ssh_port=2222
 Copy Public-Key SSH to Server untuk SSH tanpa Password:
 ```
 ssh-copy-id vagrant@192.168.99.11
-ssh-copy-id root@202.173.66.126
+ssh-copy-id root@xxx.173.66.xxx
 ```
 
 Testing Login
