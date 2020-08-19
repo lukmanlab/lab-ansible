@@ -1,0 +1,21 @@
+---
+  - hosts: all
+  
+    vars:
+      USER: vagrant
+  
+    tasks:
+    - name: create_file
+      file:
+        path: "/home/{{ USER }}/hwreport.txt"
+        state: touch
+
+    - name: gather_fact_system_info
+      debug:
+        msg: "Hostname: \t {{ ansible_hostname }} \nMemory: \t {{ ansible_memtotal_mb }} \nArch: \t\t {{ ansible_architecture }} \nBIOS Date: \t {{ ansible_bios_date }} \nBIOS Version: \t {{ ansible_bios_version }}"
+      register: info_system
+  
+    - name: write_to_file_on_each_host
+      copy:
+        content: "{{ info_system.msg }}"
+        dest: "/home/{{ USER }}/hwreport.txt"

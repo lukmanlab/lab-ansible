@@ -68,4 +68,7 @@ ansible all -i hosts -m shell -a "sudo apt update"
 ansible all -i hosts -m apt -a "name=zip state=latest" -b
 ```
 
+## Study Case
+1. Gathering Fact Informasi System kedalam File hwreport.txt: [YAML](01-gather_info.yaml)
+
 
