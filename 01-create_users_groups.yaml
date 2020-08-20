@@ -1,0 +1,44 @@
+---
+  - hosts: "server1,server2"
+    become: yes
+    
+    tasks:
+    - name: create_group
+      group:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - ops
+        - dev
+  
+    - name: create_multiple_user
+      user:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - rio
+        - arya
+        - andri
+        - priyono
+        - angger
+  
+  # 
+  # You must create the user first. After that assign it user to the group that you want.
+  #
+  
+    - name: assign_users_to_group_ops
+      user:
+        name: "{{ item }}"
+        groups: ops
+      with_items:
+        - rio
+        - arya
+        - andri
+  
+    - name: assign_users_to_group_dev
+      user:
+        name: "{{ item }}"
+        groups: dev
+      with_items:
+        - priyono
+        - angger

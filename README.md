@@ -70,5 +70,6 @@ ansible all -i hosts -m apt -a "name=zip state=latest" -b
 
 ## Study Case
 1. Gathering Fact Informasi System kedalam File hwreport.txt: [YAML](01-gather_info.yaml)
+2. Create Multiple Users, Groups and Assign the Users to Groups: [YAML](01-create_users_groups.yaml)
 
 
